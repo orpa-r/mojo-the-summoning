@@ -7,7 +7,7 @@ let user;
 
 // clear sequelize and create new user before tests
 beforeAll(async () => {
-  await db.sync({ force: true })
+  await sequelize.sync({ force: true })
   user = await User.create({ username: 'gandalf' })
 })
 
@@ -17,6 +17,7 @@ describe('User', () => {
   it('has an id', async () => {
     expect(user).toHaveProperty('id')
   })
+})
 
   /**
    * Create more tests
@@ -26,9 +27,10 @@ afterAll(async () => await sequelize.sync({ force: true}))
 
 describe('User', () => {
   it('checks if username is gandalf', async () => {
-    expect(user.username).toBe('gandalf') })
-  } )
+    expect(user.username).toBe('gandalf') 
+  })
+})
 
   test('checks id', async () => {
     expect(user.id).toBe(1) 
-  } )
+})
