@@ -1,5 +1,4 @@
 // add your database connection here
-const db;
 const {Sequelize} = require("sequelize");
 const sequelize = require("../db/config");
 
@@ -10,7 +9,6 @@ const sequelize = new Sequelize({
 
 
 module.exports = {
-    db,
     sequelize,
     Sequelize
 }
