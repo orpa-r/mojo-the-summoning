@@ -3,7 +3,7 @@ const { User } = require('.')
 const { sequelize } = require('../db/config')
 
 // define in global scope
-let user
+let user;
 
 // clear sequelize and create new user before tests
 beforeAll(async () => {
@@ -23,9 +23,12 @@ describe('User', () => {
    * E.g. check that the username of the created user is actually gandalf
    */
 afterAll(async () => await sequelize.sync({ force: true}))
-describe('User', () => {
-  it('checks if username is gandalf', async ( => {
-    expect(user.username).toBe('gandalf') })
-  )})
 
-  
+describe('User', () => {
+  it('checks if username is gandalf', async () => {
+    expect(user.username).toBe('gandalf') })
+  } )
+
+  test('checks id', async () => {
+    expect(user.id).toBe(1) 
+  } )
