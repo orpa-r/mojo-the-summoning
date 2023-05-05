@@ -1,8 +1,8 @@
 const { User } = require('./User')
 // import the rest of your models above
-const { Deck } = require('./User')
-const { Card } = require('./User')
-const { Attack } = require('./User')
+const { Deck } = require('./Deck')
+const { Card } = require('./Card')
+const { Attack } = require('./Attack')
 
 //set up the associations here
 User.hasOne(Deck);
