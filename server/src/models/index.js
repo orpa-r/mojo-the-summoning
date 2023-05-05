@@ -6,8 +6,11 @@ const { Attack } = require('./Attack')
 
 //set up the associations here
 User.hasOne(Deck);
+Deck.belongsTo(User);
+
 Deck.hasMany(Card);
 Card.hasOne(Deck);
+
 Card.hasMany(Attack);
 Attack.belongsToMany(Card);
 
