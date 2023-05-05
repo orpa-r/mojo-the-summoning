@@ -1,6 +1,7 @@
 // add your database connection here
+const db;
 const {Sequelize} = require("sequelize");
-const path = require("path");
+const sequelize = require("../db/config");
 
 const sequelize = new Sequelize({
     dialect: 'sqlite',
@@ -9,6 +10,7 @@ const sequelize = new Sequelize({
 
 
 module.exports = {
+    db,
     sequelize,
     Sequelize
 }
