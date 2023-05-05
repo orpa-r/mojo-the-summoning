@@ -1,6 +1,6 @@
 const { describe, it, expect, beforeAll, afterAll } = require('@jest/globals')
 const { User } = require('.')
-const { db } = require('../db/config')
+const { sequelize } = require('../db/config')
 
 // define in global scope
 let user
@@ -12,7 +12,7 @@ beforeAll(async () => {
 })
 
 // clear sequelize after tests
-afterAll(async () => await db.sync({ force: true }))
+afterAll(async () => await sequelize.sync({ force: true }))
 describe('User', () => {
   it('has an id', async () => {
     expect(user).toHaveProperty('id')
@@ -22,12 +22,8 @@ describe('User', () => {
    * Create more tests
    * E.g. check that the username of the created user is actually gandalf
    */
-afterAll(async () => await sequelize.sync({ force: true}) )
+afterAll(async () => await sequelize.sync({ force: true}))
 describe('User', () => {
   it('checks if username is gandalf', async ( => {
-    expect(user.username).toBe('gandalf')
-  })
-
-})
-  
-
+    expect(user.username).toBe('gandalf') })
+  )})

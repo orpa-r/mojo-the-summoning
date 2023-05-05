@@ -1,3 +1,5 @@
+const { sequelize } = require('../db/config.js')
+
 let Attack = sequelize.define("Attack", {
     id: Sequelize.INTERGER,
     title: Sequelize.STRING,
