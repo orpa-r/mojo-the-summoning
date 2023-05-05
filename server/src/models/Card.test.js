@@ -7,7 +7,7 @@ let card;
 
 beforeAll(async () => {
     await sequelize.sync({ force: true })
-    user = await Card.create({ card: 'magic' })
+    card = await Card.create({ card: 'magic' })
   })
   
   // clear sequelize after tests

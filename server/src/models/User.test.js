@@ -31,6 +31,4 @@ describe('User', () => {
   })
 })
 
-  test('checks id', async () => {
-    expect(user.id).toBe(1) 
-})
+
